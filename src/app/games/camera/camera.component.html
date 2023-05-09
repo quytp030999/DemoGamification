@@ -1,0 +1,67 @@
+<div id="wrapper">
+  <div id="main">
+    <div class="camera" id="camera">
+      <img
+        src="../../../assets/imgs/camera/camera.png"
+        alt=""
+        class="icon-camera"
+        id="icon-camera"
+        (click)="startVideo()"
+        *ngIf="!isStartVideo"
+      />
+      <img
+        *ngFor="let item of listItemCamera; let idx = index"
+        [src]="item.url"
+        [style.width.px]="item.width"
+        [style.height.px]="item.height"
+        (touchstart)="onTouchStart($event, item)"
+        (touchmove)="onTouchMove($event, item)"
+        (touchend)="onTouchEnd($event, item, idx)"
+        alt=""
+        class="item-camera"
+        cdkDragBoundary=".camera"
+        cdkDrag
+      />
+      <div class="show-img-capture" *ngIf="captureImage">
+        <img
+          src="../../../assets/imgs/camera/back.png"
+          alt=""
+          class="back-icon"
+          (click)="onBackReviewImgCapture()"
+        />
+        <img [src]="captureImage" alt="" class="img-capture" />
+      </div>
+      <webcam
+        id="webcam"
+        *ngIf="isStartVideo"
+        [height]="height"
+        [trigger]="triggerObservable"
+        [videoOptions]="videoOptions"
+        (initError)="handleInitError($event)"
+        [allowCameraSwitch]="false"
+      ></webcam>
+      <img
+        src="../../../assets/imgs/camera/delete.png"
+        alt=""
+        class="trash"
+        [style.display]="isDisplayTrash"
+      />
+    </div>
+    <div class="feature">
+      <div class="item-list">
+        <img
+          *ngFor="let item of listItem; let isLast = last"
+          [ngStyle]="{ 'margin-right.px': isLast ? 20 : 0 }"
+          [src]="item.url"
+          alt=""
+          class="item"
+          (click)="chooseItem(item)"
+        />
+      </div>
+      <div id="capture">
+        <div class="wrap-capture-body"></div>
+        <div class="capture-body" (click)="captureImg()"></div>
+      </div>
+    </div>
+  </div>
+</div>

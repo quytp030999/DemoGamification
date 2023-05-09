@@ -1,0 +1,91 @@
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    .wrap-box {
+      position: absolute;
+      width: 100%;
+      height: 65%;
+      top: 0;
+      left: 0;
+      background-color: #33ff34;
+      background-image: url(../../../assets/imgs/choose/18966107.jpg);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      .box1 {
+        position: absolute;
+        width: 40%;
+        height: 30%;
+        background-color: blueviolet;
+        background-image: url(../../../assets/imgs/classify/fruits-frame.jpg);
+        background-size: cover;
+        left: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        place-items: center;
+        border-radius: 10px;
+      }
+      .box2 {
+        position: absolute;
+        width: 40%;
+        height: 30%;
+        background-color: brown;
+        background-image: url(../../../assets/imgs/classify/toys-frame.jpg);
+        background-size: cover;
+        right: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        place-items: center;
+        border-radius: 10px;
+      }
+
+      .item-in-box {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .box-items {
+      position: absolute;
+      width: 100%;
+      height: 35%;
+      background-color: #333;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      place-items: center;
+      .item {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  #wrapper {
+    background-color: #ffffff;
+    #main {
+      width: 400px;
+      height: 800px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div id="main" (click)="positionMain($event)">
+  <img [src]="backgroundImg" alt="" class="background" />
+  <img [src]="logo" alt="" class="logo" />
+  <img [src]="purple" alt="" class="purple" />
+  <img [src]="white" alt="" class="white" />
+  <img [src]="percent" alt="" class="percent" />
+  <img [src]="receiveHouse" alt="" class="receiveHouse">
+  <img [src]="location" alt="" class="location">
+  <img [src]="textAn" alt="" class="textAn">
+  <img [src]="textDuong" alt="" class="textDuong">
+  <img [src]="textVuong" alt="" class="textVuong">
+  <img [src]="textNguyen" alt="" class="textNguyen">
+  <img [src]="textVan" alt="" class="textVan">
+  <img [src]="textCu" alt="" class="textCu">
+  <!-- <div class="empty-circle-animation" [ngStyle]="{'display': display}"></div> -->
+  <svg viewBox="0 0 36 36" class="circle-box-1" [ngStyle]="{'display': displayPoint1}">
+    <circle cx="18" cy="18" r="8" fill="transparent" stroke="#0077C9" stroke-width="1"
+    class="circle-animation" />
+  </svg>
+
+  <svg viewBox="0 0 36 36" class="circle-box-3" [ngStyle]="{'display': displayPoint2}">
+    <circle cx="18" cy="18" r="8" fill="transparent" stroke="#0077C9" stroke-width="1"
+    class="circle-animation" />
+  </svg>
+</div>
+

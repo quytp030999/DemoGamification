@@ -1,0 +1,32 @@
+.gift-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: #ddd;
+  background-image: url(../../../assets/imgs/gift-shake/8143.jpg);
+  background-size: cover;
+  .wrap-gift {
+    position: absolute;
+    width: 400px;
+    height: 380px;
+    border-radius: 50%;
+    top: 150px;
+    left: 210px;
+    .gift {
+      position: absolute;
+      top: 92%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55px;
+      height: 55px;
+      background-color: red;
+      border-radius: 50%;
+      background-image: url(../../../assets/imgs/gift-shake/3vj4_4my5_160326.jpg);
+      background-size: cover;
+      opacity: 0.8;
+    }
+  }
+}

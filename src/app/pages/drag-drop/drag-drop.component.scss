@@ -1,0 +1,48 @@
+.item-1 {
+  position: absolute;
+  width: 20%;
+  z-index: 1;
+}
+
+.example-boundary {
+  width: 600px;
+  height: 800px;
+  position: relative;
+  border: dotted #ccc 2px;
+}
+
+#show-video {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: aquamarine;
+}
+
+.imgCapture {
+  position: absolute;
+  width: 600px;
+  height: 800px;
+  right: 0;
+  top: 0;
+  background-color: aqua;
+}
+
+.item-list-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.item-list {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: inline-block;
+  border: 1px solid gray;
+  padding: 10px;
+  margin-right: 10px;
+}

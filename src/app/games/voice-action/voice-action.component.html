@@ -1,0 +1,33 @@
+<div id="wrapper">
+  <div id="main">
+    <img class="banner" src="../../../assets/imgs/voice/banner.jpg" alt="" />
+    <img class="bottle" src="../../../assets/imgs/voice/strongbow.png" alt="" />
+    <p class="title on-top">SAY <span class="sub-title">[ STRONGBOW ]</span></p>
+    <p class="title on-bottom">AND ENJOY A DRINK</p>
+    <div id="microphone">
+      <div class="mic-body"></div>
+      <div class="mic-top">
+        <img
+          class="mic-icon"
+          src="../../../assets/imgs/voice/microphone.png"
+          alt=""
+          (click)="startVoiceRecognition()"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="popup-container" [ngStyle]="{ display: isCompleted }">
+    <div class="popup">
+      <img
+        src="../../../assets/imgs/diff/Congratulation.png"
+        alt=""
+        class="congrats"
+      />
+      <h2>Chúc mừng!</h2>
+      <p class="description-congrats">{{ message }} -- {{ voiceText }}</p>
+      <button class="popup-close" (click)="onClickCongrats()">
+        Nhận thưởng
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(30, 20, 30);
+  color: linen;
+  font-family: "Satisfy", cursive;
+  letter-spacing: 1.2px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+}
+
+article {
+  position: relative;
+  left: 50px;
+  top: 10vh;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+}
+
+h1 {
+  font-weight: 800;
+  color: #ff6584;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: rgb(30, 20, 30);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+  border-right: 1px solid rgba(200, 200, 200, 0.5);
+  border-left: 1px solid rgba(120, 120, 120, 0.4);
+  border-top: 1px solid rgba(120, 120, 120, 0.4);
+  box-shadow: 2px 2px 5px rgba(120, 120, 120, 0.2) inset;
+  color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+a:link,
+a:visited {
+  color: linen;
+}
+
+a:hover,
+a:active {
+  color: #ff6584;
+}
+
+.show-text {
+  margin-top: 20px;
+  color: #ff6584;
+  text-transform: uppercase;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.controller {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: rgb(30, 20, 30);
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  border-left: 1px solid rgba(200, 200, 200, 0.5);
+  border-right: 1px solid rgba(120, 120, 120, 0.4);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.4);
+  box-shadow: 2px 2px 5px rgba(120, 120, 120, 0.2),
+    -4px -4px 5px rgba(120, 120, 120, 0.3);
+  color: inherit;
+  margin-right: 10px;
+}

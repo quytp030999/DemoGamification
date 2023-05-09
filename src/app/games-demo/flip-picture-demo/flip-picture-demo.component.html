@@ -1,0 +1,47 @@
+<!-- <div class="flip-card" (click)="onFlip()">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="../../../assets/demos/imgs/flip-picture/mask.png" alt="" />
+        </div>
+        <div class="flip-card-back">
+            <img src="../../../assets/demos/imgs/flip-picture/G1.png" alt="" />
+        </div>
+    </div>
+</div> -->
+
+<!-- <div class="flip-card">
+    <img src="../../../assets/demos/imgs/flip-picture/mask.png" alt="" class="front" (click)="onFlip()" />
+    <img src="../../../assets/demos/imgs/flip-picture/g1.png" alt="" class="back" />
+</div> -->
+
+<div id="wrapper">
+    <div id="main" [ngClass]="isPlayGame == true ? 'play-game' : 'fill-info'">
+        <div id="box-info" *ngIf="!isPlayGame">
+            <div class="title">
+                <p>Điền thông tin tham gia</p>
+            </div>
+            <div class="form-input">
+                <div class="fullname">
+                    <p>Họ và Tên</p>
+                    <input type="text" placeholder="Martin Robert" [(ngModel)]="fullname" />
+                </div>
+                <div class="phone">
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="84928268175" maxlength="11" [(ngModel)]="phone" />
+                </div>
+            </div>
+            <div class="button-play">
+                <div class="button" (click)="playGame()">Chơi Ngay</div>
+            </div>
+        </div>
+        <div id="game-main" *ngIf="isPlayGame">
+            <div class="grid">
+                <div class="cell" *ngFor="let gift of gifts">
+                    <img [src]="maskPicture" alt="" class="front" [id]="'front' + gift.idx" (click)="onFlip(gift.idx)" />
+                    <img [src]="gift.url" alt="" class="back" [id]="'back' + gift.idx" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="finsh-game" *ngIf="isFinishGame"></div>
+</div>

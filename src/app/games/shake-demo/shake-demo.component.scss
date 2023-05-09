@@ -1,0 +1,178 @@
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .banner {
+      position: absolute;
+      width: 160%;
+      height: 100%;
+      left: -32%;
+      top: 0;
+    }
+    .bottle {
+      position: absolute;
+      bottom: -48px;
+      left: -18%;
+      width: 90%;
+    }
+    .liquid {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      background-color: #f5deb3;
+    }
+    .water-drop {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      position: absolute;
+      top: 395px;
+      left: 100px;
+      background-color: burlywood;
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+
+    #microphone {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 29%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      .mic-body {
+        width: 100px;
+        height: 100px;
+        background-color: #9a2935;
+        border-radius: 50%;
+      }
+
+      .mic-top {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        .mic-icon {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .title {
+      position: absolute;
+      width: 100%;
+      color: green;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      left: 3%;
+    }
+    .sub-title {
+      color: rgb(110, 184, 0);
+    }
+    .on-top {
+      top: 12%;
+    }
+    .on-bottom {
+      top: 16%;
+    }
+  }
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0;
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .light {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+    }
+    .lib {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+    }
+    h2 {
+      position: absolute;
+      text-align: center;
+      top: 33%;
+      font-size: 15px;
+      color: black;
+    }
+    .description-congrats {
+      position: absolute;
+      width: 50%;
+      color: black;
+      top: 40%;
+      font-size: 12px;
+    }
+    .popup-close {
+      position: absolute;
+      display: block;
+      width: 80px;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #c92722;
+      color: #f5f527;
+      border: none;
+      cursor: pointer;
+      font-size: 9px;
+      font-weight: bold;
+      border-radius: 10px;
+      top: 48%;
+    }
+
+    .popup-close:hover {
+      background-color: #f75e59;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  #wrapper {
+    background-color: #ffffff;
+    #main {
+      width: 400px;
+      height: 850px;
+    }
+  }
+}

@@ -1,0 +1,193 @@
+::placeholder {
+    color: currentColor;
+    margin-left: 10px;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .fill-info {
+        background-image: url(../../../assets/demos/imgs/shake-stick/fill-info-shake.png);
+    }
+    .play-game {
+        background-image: url(../../../assets/demos/imgs/shake-stick/game-play.jpg);
+    }
+    #main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        overflow: hidden;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        #box-info {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            border-radius: 10px;
+            // left: 50px;
+            bottom: 36%;
+            overflow: hidden;
+            .title {
+                position: absolute;
+                width: 100%;
+                height: 50px;
+                top: 30px;
+                display: flex;
+                justify-content: center;
+                p {
+                    color: crimson;
+                    font-size: 23px;
+                    font-weight: bold;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+            .form-input {
+                position: absolute;
+                width: 100%;
+                height: 200px;
+                top: 50px;
+                p {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    color: black;
+                    font-size: 15px;
+                    font-weight: 600;
+                    text-align: start;
+                }
+                input {
+                    width: 100%;
+                    margin-top: 5px;
+                    height: 25px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    background-color: rgb(184, 184, 184);
+                    color: white;
+                }
+                .fullname {
+                    position: absolute;
+                    width: 90%;
+                    height: 100px;
+                    top: 25px;
+                    padding: 10px;
+                }
+                .phone {
+                    position: absolute;
+                    width: 90%;
+                    height: 100px;
+                    top: 100px;
+                    padding: 10px;
+                }
+            }
+            .button-play {
+                position: absolute;
+                width: 100%;
+                height: 50px;
+                top: 230px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .button {
+                    position: absolute;
+                    width: 100px;
+                    height: 35px;
+                    background-color: crimson;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+        #gameMain {
+            position: absolute;
+            // left: 25px;
+            bottom: 32%;
+            width: 350px;
+            height: 350px;
+            .circle-click {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                top: 215px;
+                left: 130px;
+                border-radius: 50%;
+                opacity: 0.5;
+                z-index: 1;
+            }
+            .boxGift {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                left: 50px;
+                top: 50px;
+            }
+            .gifts {
+                position: absolute;
+                width: 96px;
+                height: 70px;
+                top: 120px;
+                left: 66px;
+                transform: rotateZ(6deg);
+                overflow: hidden;
+                .gift {
+                    position: absolute;
+                    width: 20%;
+                }
+                .item1 {
+                    left: 7px;
+                    top: 23px;
+                    transform: rotateZ(-15deg);
+                }
+                .item2 {
+                    left: 24px;
+                    top: 15px;
+                    transform: rotateZ(-8deg);
+                }
+                .item3 {
+                    left: 40px;
+                    top: 23px;
+                }
+                .item4 {
+                    left: 58px;
+                    top: 16px;
+                    transform: rotateZ(4deg);
+                }
+                .item5 {
+                    left: 75px;
+                    top: 30px;
+                    transform: rotateZ(10deg);
+                }
+            }
+            .gift-receive {
+                position: absolute;
+                width: 200px;
+                top: 15px;
+                left: 65px;
+                opacity: 0;
+            }
+        }
+    }
+    #finsh-game {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../../assets/demos/imgs/shake-stick/reward-shake.png);
+        background-size: cover;
+        overflow: hidden;
+        border-radius: 15px;
+        z-index: 4;
+    }
+}

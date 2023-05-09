@@ -1,0 +1,177 @@
+#main {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 200px;
+  left: 200px;
+  overflow: hidden;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  left: 65%;
+}
+
+.purple {
+  position: absolute;
+  right: 0;
+  bottom: 17%;
+  z-index: 1;
+}
+
+.white {
+  position: absolute;
+  right: 0;
+  bottom: 17%;
+}
+
+.percent {
+  position: absolute;
+  bottom: 25%;
+  z-index: 2;
+  right: 2%;
+}
+
+.receiveHouse {
+  position: absolute;
+  bottom: 20%;
+  z-index: 2;
+  right: 5%;
+}
+
+.location {
+  position: absolute;
+  z-index: 2;
+  bottom: 30%;
+  right: 0;
+}
+
+.textAn {
+  position: absolute;
+  z-index: 2;
+  bottom: 75px;
+  right: 25%;
+}
+
+.textDuong {
+  position: absolute;
+  z-index: 2;
+  bottom: 71px;
+  right: 12%;
+}
+
+.textVuong {
+  position: absolute;
+  z-index: 2;
+  bottom: 70px;
+  right: 0%;
+}
+
+.textNguyen {
+  position: absolute;
+  z-index: 2;
+  bottom: 55px;
+  right: 15%;
+}
+
+.textVan {
+  position: absolute;
+  z-index: 2;
+  bottom: 57px;
+  right: 7%;
+}
+
+.textCu {
+  position: absolute;
+  z-index: 2;
+  bottom: 57px;
+  right: 1%;
+}
+
+.empty-circle-animation {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-color: transparent;
+  clip-path: circle(50% at 50% 50%);
+  position: absolute;
+  left: 220px;
+  top: 1px;
+  // animation: appear 1s ease-in-out;
+  animation: draw 2s ease-in-out;
+}
+
+@keyframes draw {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// @keyframes rotate {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(340deg);
+//   }
+// }
+
+.circle-box-1 {
+  position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    top: 25px;
+    left: 242px;
+    transform: translate(-50%, -50%);
+    transform-box: fill-box;
+}
+
+.circle-box-3 {
+  position: absolute;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  top: 245px;
+  left: 78px;
+  transform: translate(-50%, -50%);
+  transform-box: fill-box;
+}
+
+.circle-animation {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-circle 1s linear forwards;
+}
+
+@keyframes draw-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

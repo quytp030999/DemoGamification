@@ -1,0 +1,83 @@
+#canvas {
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  left: 45%;
+  text-align: center;
+}
+
+.mic-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.fa-microphone {
+  margin-right: 10px;
+}
+
+.cam-button {
+  background-color: #3e35de; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 300px;
+}
+
+.show-video {
+  position: absolute;
+  width: 600px;
+  height: 800px;
+  top: 550px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.show-capture {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: 550px;
+  left: 550px;
+  text-align: center;
+  background-color: blue;
+}
+
+.capture-button {
+  background-color: #3e35de; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 300px;
+  margin-left: 10px;
+}
+
+.item-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#si {
+  position: absolute;
+  left: 0;
+}

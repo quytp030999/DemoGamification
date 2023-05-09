@@ -1,0 +1,25 @@
+<div id="wrapper">
+    <div id="main">
+        <img *ngFor="let item of gifts" [src]="item.url" alt="" class="item" [ngStyle]="{ left: item.left + '%' }" [class]="item.id" (click)="addPoint(item.id, item.idx)" />
+
+        <div id="box-info" *ngIf="!isPlayGame">
+            <div class="title">
+                <p>Điền thông tin tham gia</p>
+            </div>
+            <div class="form-input">
+                <div class="fullname">
+                    <p>Họ và Tên</p>
+                    <input type="text" placeholder="Martin Robert" [(ngModel)]="fullname" />
+                </div>
+                <div class="phone">
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="84928268175" maxlength="11" [(ngModel)]="phone" />
+                </div>
+            </div>
+            <div class="button-play">
+                <div class="button" (click)="playGame()">Chơi Ngay</div>
+            </div>
+        </div>
+    </div>
+    <div id="finsh-game" *ngIf="isFinishGame"></div>
+</div>

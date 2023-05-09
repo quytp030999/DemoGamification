@@ -1,0 +1,14 @@
+#box1{
+  position: absolute;
+  width: 200px;
+  height:200px;
+  overflow: hidden;
+  border: 3px solid #ececec;
+  border-radius:10px;
+}
+
+#box1 img{
+  width: auto;
+  height: 200px;
+  position: absolute;
+}

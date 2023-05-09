@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scratch Card Game</title>
+    <style>
+        canvas {
+            /* border: 1px solid #ccc; */
+            position: absolute;
+            z-index: 1;
+            left: 0;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="300" height="200"></canvas>
+    <img src="../../../assets/back.jpg" alt="" />
+    <script>
+        // get canvas element and its context
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // draw the scratch card background
+        ctx.fillStyle = "#333";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // set up the scratch card image
+        var img = new Image();
+        img.src = "https://via.placeholder.com/300x200?text=Scratch+Here";
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0);
+        };
+
+        // listen for mouse events on the canvas
+        canvas.addEventListener("mousedown", startScratch);
+        canvas.addEventListener("mousemove", scratch);
+        canvas.addEventListener("mouseup", endScratch);
+
+        // scratch functions
+        var isScratching = false;
+
+        function startScratch(event) {
+            isScratching = true;
+            scratch(event);
+        }
+
+        function scratch(event) {
+            if (isScratching) {
+                ctx.globalCompositeOperation = "destination-out";
+                ctx.beginPath();
+                ctx.arc(event.offsetX, event.offsetY, 20, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+
+        function endScratch(event) {
+            isScratching = false;
+        }
+    </script>
+</body>
+
+</html>

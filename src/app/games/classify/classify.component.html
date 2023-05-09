@@ -1,0 +1,37 @@
+<div id="wrapper">
+  <div id="main">
+    <div class="wrap-box" id="wrap-box">
+      <div class="box1" id="box1">
+        <img
+          *ngFor="let item of listFruit"
+          [src]="item.url"
+          alt=""
+          class="item-in-box"
+          [ngStyle]="{ display: item.display }"
+        />
+      </div>
+      <div class="box2" id="box2">
+        <img
+          *ngFor="let item of listToys"
+          [src]="item.url"
+          alt=""
+          class="item-in-box"
+          [ngStyle]="{ display: item.display }"
+        />
+      </div>
+    </div>
+    <div class="box-items">
+      <img
+        *ngFor="let item of items"
+        [src]="item.url"
+        alt=""
+        cdkDragBoundary="#main"
+        cdkDrag
+        class="item"
+        [id]="item.id"
+        (cdkDragReleased)="onDragReleased($event, item.position, item.idx, item.id)"
+        [ngStyle]="{ display: item.display }"
+      />
+    </div>
+  </div>
+</div>

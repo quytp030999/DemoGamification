@@ -1,0 +1,30 @@
+:root {
+  --size: 150;
+  --unit: calc((var(--size) / 1366) * 1vmin);
+  --background: #e4e4e4;
+}
+
+#main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 1000px;
+  background-color: antiquewhite;
+}
+
+#left-pine {
+  position: absolute;
+  top: 30.5%;
+  // left: 11.5%;
+  width: calc(520 * calc((150 / 1366) * 1vmin));
+}
+
+#center-branch {
+  position: absolute;
+  top: 26%;
+  left: 35.5%;
+  width: calc(140 * var(--unit));
+  transform-origin: 90% bottom;
+  transform: rotate(20deg);
+}

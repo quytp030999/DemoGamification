@@ -1,0 +1,139 @@
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .feature {
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: #333;
+      border-top: 1px solid #ffffff;
+      .item-list {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        display: inline-block;
+        list-style-type: none;
+        border-bottom: 2px solid #ffffff;
+        margin: 0;
+        padding: 0;
+        .item {
+          display: inline-block;
+          height: 50px;
+          width: 50px;
+          border-radius: 25px;
+          margin-left: 20px;
+          margin-top: 5%;
+        }
+      }
+      /* Hide the scrollbar */
+      .item-list::-webkit-scrollbar {
+        display: none;
+      }
+
+      #capture {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wrap-capture-body {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          opacity: 0.7;
+        }
+        .capture-body {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .camera {
+      position: absolute;
+      background-color: black;
+      width: 100%;
+      height: 80%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .icon-camera {
+        position: absolute;
+        width: 15%;
+        z-index: 1;
+      }
+      .item-camera {
+        position: absolute;
+        z-index: 1;
+      }
+      .show-img-capture {
+        position: absolute;
+        width: 100%;
+        height: 99%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .img-capture {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        .back-icon {
+          position: absolute;
+          width: 10%;
+          left: 10px;
+          top: 10px;
+          z-index: 1;
+        }
+      }
+      .trash {
+        position: absolute;
+        width: 50px;
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  #wrapper {
+    background-color: #ffffff;
+    #main {
+      width: 400px;
+      height: 850px;
+    }
+  }
+}

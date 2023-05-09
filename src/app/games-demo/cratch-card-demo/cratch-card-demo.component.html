@@ -1,0 +1,29 @@
+<div id="wrapper">
+    <div id="main">
+        <div id="box-info" [ngStyle]="{ display: isPlayGame == true ? 'none' : 'block' }">
+            <div class="title">
+                <p>Điền thông tin tham gia</p>
+            </div>
+            <div class="form-input">
+                <div class="fullname">
+                    <p>Họ và Tên</p>
+                    <input type="text" placeholder="Martin Robert" [(ngModel)]="fullname" />
+                </div>
+                <div class="phone">
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="84928268175" maxlength="11" [(ngModel)]="phone" />
+                </div>
+            </div>
+            <div class="button-play">
+                <div class="button" (click)="playGame()">Chơi Ngay</div>
+            </div>
+        </div>
+        <div id="game-main" [ngStyle]="{ display: isPlayGame == true ? 'block' : 'none' }">
+            <div id="js--sc--container" class="sc__container"></div>
+            <!-- <img src="../../../assets/demos/imgs/scratch-card/wrap-scratch.png" alt="" class="wrap-scratch" />
+            <canvas width="300" height="300" class="mask" id="canvas" (mousedown)="startScratch($event)" (mousemove)="scratch($event)" (mouseup)="endScratch($event)"></canvas>
+            <img src="../../../assets/demos/imgs/scratch-card/back.jpg" alt="" class="back-scratch" /> -->
+        </div>
+    </div>
+    <div id="finsh-game" *ngIf="isFinishGame"></div>
+</div>

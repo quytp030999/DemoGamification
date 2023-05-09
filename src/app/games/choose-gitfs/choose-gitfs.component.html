@@ -1,0 +1,30 @@
+<div id="wrapper">
+  <div id="main">
+    <div id="wrap-bar">
+      <div id="bar" [ngStyle]="{ height: widthBar + '%' }">{{ widthBar }}</div>
+    </div>
+    <img
+      *ngFor="let item of gifts"
+      [src]="item.url"
+      alt=""
+      class="item"
+      [ngStyle]="{ left: item.left + '%' }"
+      [class]="item.id"
+      (click)="addBar(item.point, item.id, item.idx)"
+    />
+  </div>
+  <div class="popup-container" [ngStyle]="{ display: isCompleted }">
+    <div class="popup">
+      <img
+        src="../../../assets/imgs/diff/Congratulation.png"
+        alt=""
+        class="congrats"
+      />
+      <h2>Chúc mừng!</h2>
+      <p class="description-congrats">
+        Bạn đã hoàn thành trò chơi với {{ widthBar }} điểm <!DOCTYPE html>
+      </p>
+      <button class="popup-close">Nhận thưởng</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div id="wrapper">
+    <div id="main" [ngClass]="isPlayGame == true ? 'play-game' : 'fill-info'">
+        <div id="box-info" [ngStyle]="{ display: isPlayGame == true ? 'none' : 'block' }">
+            <div class="title">
+                <p>Điền thông tin tham gia</p>
+            </div>
+            <div class="form-input">
+                <div class="fullname">
+                    <p>Họ và Tên</p>
+                    <input type="text" placeholder="Martin Robert" [(ngModel)]="fullname" />
+                </div>
+                <div class="phone">
+                    <p>Số điện thoại</p>
+                    <input type="text" placeholder="84928268175" maxlength="11" [(ngModel)]="phone" />
+                </div>
+            </div>
+            <div class="button-play">
+                <div class="button" (click)="playGame()">Chơi Ngay</div>
+            </div>
+        </div>
+        <div id="gameMain" [ngStyle]="{ display: isPlayGame == true ? 'block' : 'none' }">
+            <div class="circle-click" (click)="onShakeBox()"></div>
+            <img src="../../../assets/demos/imgs/shake-stick/box-gift-shake.png" alt="" class="boxGift" />
+            <div class="gifts">
+                <img src="../../../assets/demos/imgs/shake-stick/g3-shake.png" alt="" class="gift item1" />
+                <img src="../../../assets/demos/imgs/shake-stick/g4-shake.png" alt="" class="gift item2" />
+                <img src="../../../assets/demos/imgs/shake-stick/g1-shake.png" alt="" class="gift item3" />
+                <img src="../../../assets/demos/imgs/shake-stick/g2-shake.png" alt="" class="gift item4" />
+                <img src="../../../assets/demos/imgs/shake-stick/g5-shake.png" alt="" class="gift item5" />
+            </div>
+            <img src="../../../assets/demos/imgs/shake-stick/get-gift-shake.png" alt="" class="gift-receive" />
+        </div>
+    </div>
+    <div id="finsh-game" *ngIf="isFinishGame"></div>
+</div>

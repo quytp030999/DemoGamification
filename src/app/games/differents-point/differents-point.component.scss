@@ -1,0 +1,263 @@
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #f75e59;
+  .banner {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    left: 0;
+  }
+  .points {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    top: 150px;
+    background-color: #f0707f;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .game {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    left: 0;
+    top: 200px;
+    .default-circle {
+      position: absolute;
+      z-index: 2;
+      width: 100px;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      transform-box: fill-box;
+    }
+    .default-mask-circle {
+      position: absolute;
+      z-index: 3;
+      width: 100px;
+      height: 100px;
+    }
+    .fake {
+      position: absolute;
+      width: 20%;
+      right: 10px;
+      top: 10px;
+    }
+    .pic-1 {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 0;
+      cursor: not-allowed;
+      .des-pic-1 {
+        position: absolute;
+        width: 99%;
+        height: 99%;
+        top: 0;
+        left: 0;
+        border: 2px solid brown;
+      }
+      .circles-1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .elipse-1-1 {
+          top: 55px;
+          left: 60%;
+        }
+        .elipse-1-2 {
+          top: 210px;
+          left: 62%;
+        }
+        .elipse-1-3 {
+          top: 220px;
+          left: 33%;
+        }
+        .elipse-1-4 {
+          top: 345px;
+          left: 70%;
+        }
+      }
+    }
+    .pic-2 {
+      .real {
+        position: absolute;
+        width: 20%;
+        right: 10px;
+        top: 10px;
+        z-index: 1;
+      }
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      top: 400px;
+      left: 0;
+      .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .des-pic-2 {
+        position: absolute;
+        width: 99%;
+        height: 99%;
+        top: 0;
+        left: 0;
+        border: 2px solid brown;
+      }
+      .circles-2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .elipse-2-1 {
+          top: 55px;
+          left: 60%;
+        }
+        .elipse-2-2 {
+          top: 210px;
+          left: 62%;
+        }
+        .elipse-2-3 {
+          top: 220px;
+          left: 33%;
+        }
+        .elipse-2-4 {
+          top: 345px;
+          left: 70%;
+        }
+        .mask-circle-1 {
+          top: 5px;
+          left: 42%;
+        }
+        .mask-circle-2 {
+          top: 160px;
+          left: 45%;
+        }
+        .mask-circle-3 {
+          top: 170px;
+          left: 15%;
+        }
+        .mask-circle-4 {
+          top: 295px;
+          left: 52%;
+        }
+      }
+    }
+    .circle-animation {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: draw-circle 1s linear forwards;
+    }
+    .elipse-animation {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: draw-ellipse 2s linear forwards;
+    }
+  }
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #333;
+    border-radius: 10px;
+    .congrats {
+      position: absolute;
+      width: 125%;
+      top: -80px;
+      left: -25px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .description-congrats {
+      width: 215px;
+    }
+    .popup-close {
+      display: block;
+      width: 130px;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #c92722;
+      color: #f5f527;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .popup-close:hover {
+      background-color: #f75e59;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  #wrapper {
+    background-color: #ffffff;
+    #main {
+      width: 400px;
+      height: 850px;
+    }
+  }
+}
+
+@keyframes draw-circle {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-ellipse {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

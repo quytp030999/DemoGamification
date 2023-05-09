@@ -1,0 +1,90 @@
+<div id="wrapper">
+  <div id="main">
+    <img src="../../../assets/imgs/diff/banner.jpg" alt="" class="banner" />
+    <div class="points">
+      <p>{{ points }} / {{ totalPoint }}</p>
+    </div>
+    <div class="game">
+      <div class="pic-1">
+        <img
+          src="../../../assets/imgs/diff/the-ordinary-fake.png"
+          alt=""
+          class="des-pic-1"
+        />
+        <img src="../../../assets/imgs/diff/fake.png" alt="" class="fake" />
+        <div class="circles-1">
+          <svg
+            *ngFor="let c1 of pointsGame"
+            width="100"
+            height="100"
+            [class]="c1.classFake"
+            class="default-circle"
+            [id]="c1.idFake"
+            [ngStyle]="{ display: c1.display }"
+          >
+            <ellipse
+              cx="50"
+              cy="50"
+              rx="40"
+              ry="20"
+              stroke="black"
+              stroke-width="2"
+              fill="none"
+              class="elipse-animation"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="pic-2" #pic2>
+        <img src="../../../assets/imgs/diff/real.png" alt="" class="real" />
+        <img
+          src="../../../assets/imgs/diff/serum-the-ordinary.jpg"
+          alt=""
+          class="des-pic-2"
+        />
+        <div class="circles-2">
+          <div
+            *ngFor="let mask of pointsGame"
+            [class]="mask.classMask"
+            (click)="choosePoint(mask.idx)"
+            class="default-mask-circle"
+          ></div>
+          <svg
+            *ngFor="let c1 of pointsGame"
+            width="100"
+            height="100"
+            [class]="c1.classReal"
+            class="default-circle"
+            [id]="c1.idReal"
+            [ngStyle]="{ display: c1.display }"
+          >
+            <ellipse
+              cx="50"
+              cy="50"
+              rx="40"
+              ry="20"
+              stroke="black"
+              stroke-width="2"
+              fill="none"
+              class="elipse-animation"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-container" [ngStyle]="{ display: isCompleted }">
+    <div class="popup">
+      <img
+        src="../../../assets/imgs/diff/Congratulation.png"
+        alt=""
+        class="congrats"
+      />
+      <h2>TADAAAA!</h2>
+      <p class="description-congrats">Bạn đã hoàn thành trò chơi</p>
+      <button class="popup-close" (click)="onClickCongrats()">
+        Nhận thưởng
+      </button>
+    </div>
+  </div>
+</div>
